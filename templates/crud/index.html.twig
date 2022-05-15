@@ -4,7 +4,7 @@
     <header>
       <h1>Team Stationary to-do list</h1>
 
-      <p>Add a new to-do to the list:</p>
+      <p>Add a new to-do item to the list:</p>
 
       <form class="add-todo" action="{{ path('create_task') }}" method="post">
         <div class="form-group">
@@ -18,12 +18,6 @@
 
 
     <ul>
-      {# {% for task in tasks %}
-      <li {% if task.status %} class="checked" {% endif %}>
-        <a href="{{path('update_task', {'id': task.id})}}"> <span class="task-list-item">{{task.title}}</span> </a
-        ><a onclick="return confirm('Are you want sure to delete?')" href="{{path('delete_task', {'id': task.id})}}"><span class="close">X</span></a>
-      </li>
-      {% endfor %} #}
 
       {% for task in tasks %}
       <li class="todos-list-item">
@@ -41,29 +35,6 @@
       </li>
       {% endfor %}
 
-      {#  #}
-
-      {#  #}
-      {# <li class="checked">
-        <a href="undone"> <span class="task-list-item">Buy eggs </span> </a
-        ><a onclick="return confirm('Are you sure to delete?')" href="delete"><span class="close">X</span></a>
-      </li>
-      <li>
-        <a href="done"> <span class="task-list-item">Meet John </span> </a
-        ><a onclick="return confirm('Are you sure to delete?')" href="delete"><span class="close">X</span></a>
-      </li>
-      <li>
-        <a href="done"> <span class="task-list-item">Read a book </span> </a
-        ><a onclick="return confirm('Are you sure to delete?')" href="delete"><span class="close">X</span></a>
-      </li>
-      <li>
-        <a href="done"> <span class="task-list-item">Learn Doctrine ORM </span> </a
-        ><a onclick="return confirm('Are you sure to delete?')" href="delete"><span class="close">X</span></a>
-      </li>
-      <li>
-        <a href="done"> <span class="task-list-item">Prepare a meal </span> </a
-        ><a onclick="return confirm('Are you sure to delete?')" href="delete"><span class="close">X</span></a>
-      </li> #}
     </ul>
   </div>
 {% endblock %}
